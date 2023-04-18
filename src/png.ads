@@ -48,8 +48,11 @@ package Png is
                             Interlace          : Interlace_Method := None)
                             return Png_Handler;
 
+   procedure Attach_Image (Handler : in out Png_Handler;
+                           Image   : aliased Gray_Level_Image);
+
    procedure Save_Png (Filename : String;
-                       Image    : aliased Gray_Level_Image));
+                       Image    : aliased Gray_Level_Image);
 
  private
 
